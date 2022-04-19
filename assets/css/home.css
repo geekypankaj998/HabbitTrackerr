@@ -1,0 +1,10 @@
+body{
+  background-color: lightcoral;
+}
+
+#box{
+  margin:auto;
+  min-height : 500px;
+  width:500px;
+  background-color:antiquewhite; 
+}
