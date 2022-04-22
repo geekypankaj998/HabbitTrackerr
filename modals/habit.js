@@ -12,7 +12,7 @@ const habitSchema = new mongoose.Schema({
      },
      status:{
       type:String, 
-      enum : ['Done','NotDone','noAction'],
+      enum : ['Done','NotDone','None'],
       required:true
      }
   }]

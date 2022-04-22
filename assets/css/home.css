@@ -1,10 +1,70 @@
-body{
-  background-color: lightcoral;
-}
+
 
 #box{
   margin:auto;
-  min-height : 500px;
-  width:500px;
-  background-color:antiquewhite; 
+  height: 100vh;
+  min-width:900px;
+  background-color:#e1bbe2; 
+  display:flex;
+  flex-direction:column;
+  align-items: center;
 }
+
+#headBox{
+  min-height:2.5rem;
+}
+
+.flexHori button,.flexHori input{
+  display:block;
+  height:50px;
+  font-size: 20px;
+}
+
+.flexHori a,.flexHori i{
+  display:block;
+}
+
+.flexHori{
+  display:flex;
+  align-items: center;
+}
+
+#buttonStyle{
+  margin-top:10px;
+  justify-content: space-around; 
+}
+#buttonStyle button{
+  width:80px;
+}
+#info{
+  height:70px;
+  width:100%;
+  justify-content: space-around;
+}
+#info > div{
+  /* width:50px; */
+  height:100%;
+}
+.flexHori img{
+  width:30px;
+}
+
+#displayBox > div{
+  height:45px;
+  font-size:20px;
+  min-width:600px;
+  justify-content: space-around;
+  text-transform: capitalize;
+  background-color:bisque;
+  margin-bottom:5px;
+  border-bottom: 2px solid brown;
+}
+.infoApp{
+  font-weight: 500;
+  font-size:20px;
+  text-transform: uppercase;
+}
+.taskInfo{
+  width:80px;
+}
+

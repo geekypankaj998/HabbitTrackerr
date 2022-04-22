@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%=title%></title>
+
+
   <link rel="stylesheet" href="/css/home.css">
-</head>
-<body>
+
   <div id="box">
-    <h2>Habbit Tracker</h2>
-    <div>
-      <form action="">
-      <div>
-        <input type="text" placeholder="Enter the habbit here" required>
-        <a href="">
-          <button>Add</button>
-        </a>
+    <div id="headBox">
+      <h1>HABBIT TRAKKR</h1>
+    </div>
+    
+    <div id="secBox">
+      <form  action="/add" method="post">
+      <div class="flexHori">
+        <input type="text" placeholder="Enter the habbit here" name='cont' required>
+        <button>Add</button>
       </div> 
       </form>
-      <div>
-      <button>Daily</button>
-      <button>Weekly</button>
-      </div>
     </div>
-    <div>
-     
+     <!-- Info about Instructions/Status of Tasks while seeing them -->
+     <%- include('_instruction');%>
+    <div class="specText">DAILY STATUS</div>
+    <div id="displayBox" >
+     <%for(let hab of habbit){%>
+       <div class="flexHori">
+          <div class="taskInfo"><%=hab.content%></div>
+          <div class="statusBox" data-cont="<%=hab.record[0].status%>">
+            <a href="/update/?taskId=<%=hab.id%>&ind=0">     
+            </a>
+           </div> 
+          <div class="taskDel">
+            <a href="/delete/<%=hab.id%>">
+              <i class="fa fa-trash"></i>
+            </a>
+          </div>  
+       </div> 
+     <%}%> 
     </div>
+    
+    
   </div>
-</body>
-</html>
+  <script src="/js/weekly.js"></script>

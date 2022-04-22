@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/weekly.css">
+
+
+<%- include('_instruction');%>
+<hr>
+
+<div id="weeklyView">
+  <%for(let hab of habbit){%>
+    <div class="flexVert">
+       <div class="habbitHead flexHori">
+         <div><%=hab.content%></div>
+         <div><a href="/delete/<%=hab.id%>"><i class="fa fa-trash"></i></a></div>
+       </div>
+       <div class="habbitDates flexHori">
+         <!-- Loop through all the records dates for this habbit -->
+         <%let currList = hab.record %>
+         <%let monthsArray=months %>
+         <%let daysArray=days %>
+         <%let countr=0%>
+          <%for(let currRecord of currList){%>
+             <div class="flexVert">
+               <% let currDay = currRecord.date.getDay()%>
+               <% currDay = daysArray[currDay]%>
+               <div class="dateBox"><%=monthsArray[currRecord.date.getMonth()]%>- 
+                <%=currRecord.date.getDate()%> 
+                <!-- <%=currDay%>    -->
+               </div>          <!--It contains Date like APR 20 like this -->
+               <div class="statusBox" data-cont="<%=currRecord.status%>">
+                <a href="/update/?taskId=<%=hab.id%>&ind=<%=countr%>">
+                        
+                </a>
+               </div>
+             </div>
+          <% countr=countr+1 }%>
+       </div>
+    </div> 
+  <%}%> 
+</div>
+
+<script src="/js/weekly.js"></script>
