@@ -41,4 +41,4 @@ NodeJS,MongoDB,Express ans EJS
 
 # Link to App
 
-Markup :  [Habbit Tracker](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+Markup :  [Habbit Tracker](http://www.google.fr/) 
