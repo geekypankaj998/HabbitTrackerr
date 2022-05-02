@@ -1,4 +1,4 @@
-# CSVUploader
+# Habbit Tracker App
 
 # Description
 
