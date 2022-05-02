@@ -44,16 +44,16 @@ router.get("/", async function (req, resp) {
       //   for(itr of arr){
       //      console.log(itr.date+" "+itr.status);
       //   }
-      let currHabbitDate = hab.record[0].date;
-    //   if(updateCurrDate.toString()==currHabbitDate.toString()){
-            let globalDate = updateCurrDate.toISOString().split('T')[0];   
-            let localDate = currHabbitDate.toISOString().split('T')[0]; 
-            if(globalDate == localDate){
-                console.log('No need to update record for : ',hab.content); 
-            }
-            else{
-                console.log('Need to update the records ',hab.content);
-            }
+    //   let currHabbitDate = hab.record[0].date;
+    // //   if(updateCurrDate.toString()==currHabbitDate.toString()){
+    //         let globalDate = updateCurrDate.toISOString().split('T')[0];   
+    //         let localDate = currHabbitDate.toISOString().split('T')[0]; 
+    //         if(globalDate == localDate){
+    //             console.log('No need to update record for : ',hab.content); 
+    //         }
+    //         else{
+    //             console.log('Need to update the records ',hab.content);
+    //         }
     //   }
 
     }

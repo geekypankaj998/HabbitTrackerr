@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/habbitDB');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/habbitDB');
 
 const db = mongoose.connection;
 
